@@ -1,7 +1,7 @@
 package com.driver;
 
 public class Pizza {
-
+   private boolean istake;
     private int price;
     private Boolean isVeg;
     private String bill;
@@ -12,23 +12,60 @@ public class Pizza {
     }
 
     public int getPrice(){
+        if(isVeg){
+            price +=300;
+
+        }
+        else{
+            price +=400;
+        }
+
         return this.price;
     }
 
     public void addExtraCheese(){
         // your code goes here
+       price+=80;
+
     }
 
     public void addExtraToppings(){
         // your code goes here
+        if(isVeg){
+            price +=70;
+        }
+        else{
+            price +=120;
+        }
     }
 
     public void addTakeaway(){
         // your code goes here
+        price +=80;
+        istake=true;
     }
 
     public String getBill(){
         // your code goes here
+        if(isVeg){
+            bill+="Base Price of The Pizza : 300\n";
+
+        }
+        else{
+            bill+="Base Price Of The Pizza: 400\n";
+        }
+       bill+="Extra Cheese Added: 80\n";
+        if(isVeg){
+            bill+="Extra Toppings Added: 70\n";
+        }
+        else{
+            bill+="Extra Toppings Added: 120\n";
+        }
+
+        if(istake){
+            bill+="Paperbag Added: 20\n";
+        }
+        bill+=("Total Price:"+ price);
         return this.bill;
     }
 }
