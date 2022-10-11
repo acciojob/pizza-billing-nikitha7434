@@ -12,10 +12,10 @@ public class Main {
     //System.out.println(dp.getBill());
     System.out.print(dp.getBill());
 
-    Pizza p = new Pizza(false);
-    p.addExtraCheese();
-    p.addExtraToppings();
-    //p.addTakeaway();
+    Pizza p = new Pizza(true);
+    //p.addExtraCheese();
+   // p.addExtraToppings();
+    p.addTakeaway();
     System.out.println(p.getBill());
   }
 }
