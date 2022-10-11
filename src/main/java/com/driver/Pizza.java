@@ -5,6 +5,8 @@ public class Pizza {
    private boolean istake;
    private boolean isaddchess;
    private boolean istapping;
+   private boolean isgetbill;
+
     private int price;
     private Boolean isVeg;
     private String bill;
@@ -13,11 +15,11 @@ public class Pizza {
         this.isVeg = isVeg;
         // your code goes here
         if(isVeg){
-             price=300;
+             this.price=300;
 
          }
         else{
-            price =400;
+           this.price =400;
 
         }
 
@@ -56,28 +58,34 @@ public class Pizza {
     }
     public String getBill(){
         // your code goes here
-        bill="";
-        if(isVeg){
-            bill+="Base Price of The Pizza : 300\n";
-        }
-        else{
-            bill+="Base Price Of The Pizza: 400\n";
-        }
-        if(isaddchess) {
-            bill += "Extra Cheese Added: 80\n";
-        }
-        if(istapping) {
-            if (isVeg) {
-                bill += "Extra Toppings Added: 70\n";
-            } else {
-                bill += "Extra Toppings Added: 120\n";
-            }
-        }
 
-        if(istake){
-            bill+="Paperbag Added: 20\n";
-        }
-        bill+=("Total Price:"+ price);
-        return this.bill;
+            bill = "";
+            if(!isgetbill) {
+                if (isVeg) {
+                    bill += "Base Price of The Pizza : 300\n";
+                } else {
+                    bill += "Base Price Of The Pizza: 400\n";
+                }
+                if (isaddchess) {
+                    bill += "Extra Cheese Added: 80\n";
+                }
+                if (istapping) {
+                    if (isVeg) {
+                        bill += "Extra Toppings Added: 70\n";
+                    } else {
+                        bill += "Extra Toppings Added: 120\n";
+                    }
+                }
+
+                if (istake) {
+                    bill += "Paperbag Added: 20\n";
+                }
+                bill += ("Total Price:" + price);
+                isgetbill=true;
+            }
+
+
+            return this.bill;
+
     }
 }
