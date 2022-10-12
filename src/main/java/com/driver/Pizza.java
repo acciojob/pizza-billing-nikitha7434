@@ -36,7 +36,7 @@ public class Pizza {
            this.isextraTappingprice=120;
         }
 
-        bill = "Base Price of The Pizza :" + this.price+"\n";
+        bill = "Base Price of The Pizza : " + this.price+"\n";
     }
 
     public int getPrice(){
@@ -74,16 +74,16 @@ public class Pizza {
             if(!isgetbill) {
 
                 if (isaddchess) {
-                    bill += "Extra Cheese Added:"+this.isetrechessprice+"\n";
+                    bill += "Extra Cheese Added: "+this.isetrechessprice+"\n";
                 }
                 if (istapping) {
-                    bill += "Extra Toppings Added:"+this.isextraTappingprice+"\n";
+                    bill += "Extra Toppings Added: "+this.isextraTappingprice+"\n";
                 }
 
                 if (istake) {
-                    bill += "Paperbag Added:"+this.bagprice+"\n";
+                    bill += "Paperbag Added: "+this.bagprice+"\n";
                 }
-                bill += "Total Price:" +this.price+"\n";
+                bill += "Total Price: " +this.price+"\n";
 
                 isgetbill=true;
             }
