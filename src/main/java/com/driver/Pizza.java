@@ -74,16 +74,16 @@ public class Pizza {
             if(!isgetbill) {
 
                 if (isaddchess) {
-                    bill += "Extra Cheese Added: "+this.isetrechessprice+"\n";
+                    bill = this.bill+"Extra Cheese Added: "+this.isetrechessprice+"\n";
                 }
                 if (istapping) {
-                    bill += "Extra Toppings Added: "+this.isextraTappingprice+"\n";
+                    bill =this.bill+ "Extra Toppings Added: "+this.isextraTappingprice+"\n";
                 }
 
                 if (istake) {
-                    bill += "Paperbag Added: "+this.bagprice+"\n";
+                    bill =this.bill+ "Paperbag Added: "+this.bagprice+"\n";
                 }
-                bill += "Total Price: " +this.price+"\n";
+                bill =this.bill+ "Total Price: " +this.price+"\n";
 
                 isgetbill=true;
             }
