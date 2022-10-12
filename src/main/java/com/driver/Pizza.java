@@ -16,6 +16,11 @@ public class Pizza {
     private String bill;
 
     public Pizza(Boolean isVeg){
+
+        this.istake=false;
+        this.isaddchess=false;
+        this.istapping=false;
+        this.isgetbill=false;
         this.isVeg = isVeg;
         this.isetrechessprice=80;
         this.bagprice=20;
@@ -50,8 +55,9 @@ public class Pizza {
         // your code goes here
         if (!istapping) {
             this.price=this.price+this.isextraTappingprice;
+            istapping=true;
         }
-        istapping=true;
+
     }
 
     public void addTakeaway() {
@@ -77,7 +83,8 @@ public class Pizza {
                 if (istake) {
                     bill += "Paperbag Added:"+this.bagprice+"\n";
                 }
-                bill += "Total Price:" + this.price+"\n";
+                bill += "Total Price:" +this.price+"\n";
+
                 isgetbill=true;
             }
 
