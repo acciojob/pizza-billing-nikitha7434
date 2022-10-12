@@ -36,7 +36,7 @@ public class Pizza {
            this.isextraTappingprice=120;
         }
 
-        bill = "Base Price of The Pizza : " + this.price+"\n";
+        bill = "Base Price Of The Pizza : " + this.price+"\n";
     }
 
     public int getPrice(){
